@@ -1,5 +1,7 @@
 import Seperator from '@/components/Blogs/Seperator';
 import { Roboto_Mono } from 'next/font/google';
+import AText from '@/ui/AText';
+
 const RobotoMono = Roboto_Mono({ subsets: ['latin'] });
 
 const Blogs = () => {
@@ -23,8 +25,9 @@ const Blogs = () => {
   ];
   return (
     <div className='mt-16 px-14'>
-      <div className='text-7xl font-bold'>Blogs</div>
-      <div className='my-8'>Posting random blogs.</div>
+      <div className='text-7xl font-bold mb-8'>
+        <AText>Blogs</AText>
+      </div>
       {blogsList.map((blog, index) => (
         <div key={index} className='flex h-32'>
           <div

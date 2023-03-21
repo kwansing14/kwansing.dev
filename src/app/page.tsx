@@ -11,12 +11,10 @@ const SofiaSans = Sofia_Sans({ subsets: ['latin'] });
 export default function Home() {
   return (
     <main className={SofiaSans.className}>
-      {/* <div className={inter.className}>Kwan</div> */}
       <Hero />
-      {/* <AboutMe /> */}
-      <Projects />
+      {/* <Projects />
       <Blogs />
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }

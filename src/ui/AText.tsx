@@ -1,9 +1,7 @@
 'use client';
-import { useRef, useLayoutEffect } from 'react';
+import { useRef, useLayoutEffect, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const AText: React.FC<{
   children: string;
@@ -11,8 +9,9 @@ const AText: React.FC<{
 }> = ({ children, delay }) => {
   // keyframe usage
   const ref = useRef(null);
-  const t = { trigger: ref.current };
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const t = { trigger: ref.current };
     gsap.fromTo(
       ref.current,
       {

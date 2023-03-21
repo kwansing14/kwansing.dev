@@ -3,11 +3,11 @@ import AText from '@/ui/AText';
 
 const Portfolio2022 = () => {
   return (
-    <ProjectCard laptopSrc='/mac/mac-draco.gltf'>
-      <div className='mt-6 text-7xl font-bold'>
+    <ProjectCard laptopSrc='/mac/mac-portfolio2023.gltf'>
+      <div className='mt-6 mb-2 text-7xl font-bold'>
         <AText>Portfolio Project 2022</AText>
       </div>
-      <div className='mt-6'>
+      <div className='mt-4'>
         The portfolio project was built in 2022, utilizing the latest web
         technologies to provide a modern and optimized user experience. The
         project was created using NextJS, which provides numerous benefits such
