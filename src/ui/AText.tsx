@@ -1,15 +1,17 @@
 'use client';
-import { useEffect, useState, useRef, useLayoutEffect } from 'react';
-import { a, useSpring, useInView } from '@react-spring/web';
-import { gsap } from 'gsap';
+import { useRef, useLayoutEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AText: React.FC<{
   children: string;
   delay?: number;
-  height?: number;
-}> = ({ children, delay, height = 20 }) => {
+}> = ({ children, delay }) => {
   // keyframe usage
   const ref = useRef(null);
+  const t = { trigger: ref.current };
   useLayoutEffect(() => {
     gsap.fromTo(
       ref.current,
@@ -22,16 +24,19 @@ const AText: React.FC<{
         translateY: '0',
         opacity: 1,
         duration: 1,
-        delay: 0.5,
+        delay: delay || 0.5,
         skewY: 0,
         ease: 'power4',
+        scrollTrigger: delay ? undefined : t,
       }
     );
   });
 
   return (
     <div className='overflow-hidden'>
-      <div ref={ref}>{children}</div>
+      <div className='opacity-0' ref={ref}>
+        {children}
+      </div>
     </div>
   );
 };

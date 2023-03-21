@@ -1,9 +1,12 @@
 import ProjectCard from '@/ui/ProjectCard';
+import AText from '@/ui/AText';
 
 const Portfolio2022 = () => {
   return (
     <ProjectCard laptopSrc='/mac/mac-draco.gltf'>
-      <div className='mt-6 text-7xl font-bold'>Portfolio Project 2022</div>
+      <div className='mt-6 text-7xl font-bold'>
+        <AText>Portfolio Project 2022</AText>
+      </div>
       <div className='mt-6'>
         The portfolio project was built in 2022, utilizing the latest web
         technologies to provide a modern and optimized user experience. The
