@@ -2,7 +2,7 @@ import Template from './Template';
 
 const KnoxDao = () => {
   return (
-    <Template title={'KnoxDAO'} pic={'/mac/mac-knox-site.gltf'}>
+    <Template title={'KnoxDAO'}>
       <div>
         KnoxDAO is a project that aims to create a decentralized, secure, and
         accessible DAO built on Celo chain.

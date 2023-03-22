@@ -1,7 +1,13 @@
 'use client';
 
 import * as THREE from 'three';
-import React, { Suspense, useEffect, useRef, useState } from 'react';
+import React, {
+  Suspense,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Canvas, useFrame, type ThreeEvent } from '@react-three/fiber';
 import {
   Environment,
@@ -11,6 +17,7 @@ import {
 } from '@react-three/drei';
 import { a as three } from '@react-spring/three';
 import { a as web, useSpring } from '@react-spring/web';
+import { HiChevronDoubleDown } from 'react-icons/hi';
 
 interface ModelProps {
   src: string;
@@ -31,9 +38,8 @@ const Model: React.FC<ModelProps> = ({
   const { nodes, materials } = useGLTF(src) as any;
   // Take care of cursor state on hover
   const [hovered, setHovered] = useState(false);
-  // const { scale } = useSpring({ scale: );
   const { scale } = useSpring({
-    scale: isZoom ? 1.5 : 1,
+    scale: isZoom ? 1.7 : 1,
   });
 
   useEffect(
@@ -131,7 +137,7 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
   };
 
   const bgAnimate = useSpring({
-    background: open ? '#323232' : '#ffffff',
+    background: open ? '#ffffff' : '#ffffff',
   });
 
   const btnAnimate = useSpring({
@@ -145,6 +151,11 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
     display: open ? 'none' : 'flex',
   });
 
+  const downAnimate = useSpring({
+    from: { translateY: '10px' },
+    to: { translateY: '10px' },
+  });
+
   const dragMeAnimate = useSpring({
     opacity: open ? '0.2' : '0',
     translateY: open ? '0px' : '100px',
@@ -153,7 +164,7 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
   return (
     <web.main style={bgAnimate} className='h-full relative'>
       <web.div
-        className='text-4xl text-white absolute font-extrabold top-4 left-0 w-full flex justify-center items-center tracking-widest cursor-pointer'
+        className='text-4xl text-black absolute font-extrabold top-4 left-0 w-full flex justify-center items-center tracking-widest cursor-pointer'
         style={dragMeAnimate}
       >
         DRAG ME
@@ -190,15 +201,18 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
         />
       </Canvas>
       <web.div
-        className='text-4xl absolute font-extrabold top-0 left-0 w-full h-full flex justify-center items-center tracking-widest cursor-pointer'
+        className='text-4xl absolute font-extrabold top-0 left-0 w-full h-full flex flex-col justify-end items-center tracking-widest cursor-pointer pb-24'
         style={clickAnimate}
         onClick={() => setOpen(true)}
       >
         CLICK ME
+        <div className='hover:translate-y-1 transition-all duration-500'>
+          <HiChevronDoubleDown />
+        </div>
       </web.div>
       <web.button
         className={
-          'absolute top-4 right-4 font-bold text-white py-2 px-4 tracking-widest'
+          'absolute top-4 right-4 font-bold text-black py-2 px-4 tracking-widest'
         }
         style={btnAnimate}
         onClick={() => {
@@ -211,7 +225,7 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
       </web.button>
       <web.button
         className={
-          'absolute top-4 left-4 font-bold text-white py-2 px-4 tracking-widest'
+          'absolute top-4 left-4 font-bold text-black py-2 px-4 tracking-widest'
         }
         style={btnAnimate}
         onClick={() => {

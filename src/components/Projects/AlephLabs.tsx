@@ -1,10 +1,9 @@
-import ProjectCard from '@/ui/ProjectCard';
 import AText from '@/ui/AText';
 import Template from './Template';
 
 const AlephLabs = () => {
   return (
-    <Template title={'Aleph Labs Site'} pic={'/mac/mac-aleph-site.gltf'}>
+    <Template title={'Aleph Labs Site'}>
       <div>
         Set up the base file structure and library for Aleph sie. Contributed
         more than 50% of the codebase.

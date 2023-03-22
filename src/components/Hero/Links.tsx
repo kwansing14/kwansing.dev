@@ -8,7 +8,7 @@ const Links = () => {
 
   const links = [{ name: 'LinkedIn' }, { name: 'GitHub' }];
   return (
-    <LinkBar fullW variant={2} v2State={isMouseEnter}>
+    <LinkBar variant={2} v2State={isMouseEnter}>
       {links.map((link, index) => (
         <div
           key={index}

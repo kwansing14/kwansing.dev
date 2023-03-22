@@ -1,10 +1,9 @@
-import ProjectCard from '@/ui/ProjectCard';
 import AText from '@/ui/AText';
 import Template from './Template';
 
 const Portfolio2022 = () => {
   return (
-    <Template title={'Portfolio 2022'} pic={'/mac/mac-portfolio2023.gltf'}>
+    <Template title={'Portfolio 2022'}>
       <div>
         The portfolio project was built in 2022, utilizing the latest web
         technologies to provide a modern and optimized user experience. The
