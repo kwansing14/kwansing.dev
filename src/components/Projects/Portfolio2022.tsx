@@ -1,8 +1,11 @@
 import Template from './Template';
 
+import alephweb from '@public/static/portfolioweb.png';
+import alephmobile from '@public/static/portfoliomobile.png';
+
 const Portfolio2022 = () => {
   return (
-    <Template title={'Portfolio 2022'}>
+    <Template title={'Portfolio 2022'} web={alephweb} mobile={alephmobile}>
       <div>
         The portfolio project was built in 2022, utilizing the latest web
         technologies to provide a modern and optimized user experience. The

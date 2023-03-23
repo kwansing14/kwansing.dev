@@ -1,8 +1,10 @@
 import Template from './Template';
+import alephweb from '@public/static/alephweb.png';
+import alephmobile from '@public/static/alephmobile.png';
 
 const AlephLabs = () => {
   return (
-    <Template title={'Aleph Labs Site'}>
+    <Template title={'Aleph Labs Site'} web={alephweb} mobile={alephmobile}>
       <div>
         Set up the base file structure and library for Aleph sie. Contributed
         more than 50% of the codebase.

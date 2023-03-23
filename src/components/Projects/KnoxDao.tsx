@@ -1,8 +1,10 @@
 import Template from './Template';
+import knoxweb from '@public/static/knoxweb.png';
+import knoxmobile from '@public/static/knoxmobile.png';
 
 const KnoxDao = () => {
   return (
-    <Template title={'KnoxDAO'}>
+    <Template title={'KnoxDAO'} web={knoxweb} mobile={knoxmobile}>
       <div>
         KnoxDAO is a project that aims to create a decentralized, secure, and
         accessible DAO built on Celo chain.
