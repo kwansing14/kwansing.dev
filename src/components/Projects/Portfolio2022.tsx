@@ -1,4 +1,3 @@
-import AText from '@/ui/AText';
 import Template from './Template';
 
 const Portfolio2022 = () => {

@@ -1,7 +1,12 @@
 import { ReactNode } from 'react';
+import { BiLinkExternal } from 'react-icons/bi';
 import AText from '@/ui/AText';
 import LinkBar from '@/ui/LinkBar';
-import { BiLinkExternal } from 'react-icons/bi';
+import Image from 'next/image';
+
+import alephweb from '@public/static/portfolio2022web.png';
+import alephmobile from '@public/static/portfolio2022mobile.png';
+
 interface Prop {
   title: string;
   children: ReactNode;
@@ -21,7 +26,24 @@ const Template: React.FC<Prop> = ({ title, children }) => {
           <BiLinkExternal />
         </LinkBar>
       </div>
-      <div className='w-6/12 h-144 border'>empty</div>
+      <div className='w-6/12 h-144 border relative translate-y-16'>
+        {/* <Image
+          src='/static/alephweb.png'
+          alt='alephweb'
+          width={667}
+          height={500}
+        /> */}
+        <Image
+          className='absolute top-0 left-0 -translate-x-64'
+          src={alephmobile}
+          alt='alephmobile'
+        />
+        <Image
+          className='absolute top-0 left-0 translate-x-16'
+          src={alephweb}
+          alt='alephweb'
+        />
+      </div>
     </div>
   );
 };
