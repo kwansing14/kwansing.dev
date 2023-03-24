@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 // import Laptop from '@/ui/Laptop';
 
 const Hero = () => {
-  const Laptop = dynamic(() => import('@/ui/Laptop'));
+  const Laptop = dynamic(() => import('@/ui/Laptop'), { ssr: false });
   return (
     <div className='px-14'>
       <div className='flex items-end'>

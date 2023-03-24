@@ -1,5 +1,4 @@
 import Template from './Template';
-
 import alephweb from '@public/static/portfolioweb.png';
 import alephmobile from '@public/static/portfoliomobile.png';
 
