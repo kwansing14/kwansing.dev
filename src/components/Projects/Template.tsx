@@ -2,8 +2,8 @@ import { ReactNode } from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
 import AText from '@/ui/AText';
 import LinkBar from '@/ui/LinkBar';
-import Image from 'next/image';
 import { StaticImageData } from 'next/image';
+import ProjectPic from '@/ui/ProjectPic';
 
 interface Prop {
   title: string;
@@ -26,25 +26,7 @@ const Template: React.FC<Prop> = ({ title, children, web, mobile }) => {
           <BiLinkExternal />
         </LinkBar>
       </div>
-      <div className='w-6/12 h-144 relative translate-y-16'>
-        {/* <Image
-          src='/static/alephweb.png'
-          alt='alephweb'
-          width={667}
-          height={500}
-        /> */}
-
-        <Image
-          className='absolute top-0 left-0 translate-x-8'
-          src={web}
-          alt='webSS'
-        />
-        <Image
-          className='absolute top-0 left-0 -translate-x-1/3 scale-75 translate-y-8'
-          src={mobile}
-          alt='mobileSS'
-        />
-      </div>
+      <ProjectPic web={web} mobile={mobile} />
     </div>
   );
 };

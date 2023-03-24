@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useLayoutEffect, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -9,7 +9,7 @@ const AText: React.FC<{
 }> = ({ children, delay = 0 }) => {
   // keyframe usage
   const ref = useRef(null);
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const t = { trigger: ref.current };
     gsap.fromTo(
@@ -29,7 +29,7 @@ const AText: React.FC<{
         scrollTrigger: delay ? undefined : t,
       }
     );
-  });
+  }, [delay]);
 
   return (
     <div className='overflow-hidden'>

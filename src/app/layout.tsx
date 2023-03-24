@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'Kwan Sing - Portfolio',
@@ -12,6 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <Script
+        type='text/javascript'
+        src='https://unpkg.com/default-passive-events'
+      />
       <body>{children}</body>
     </html>
   );
