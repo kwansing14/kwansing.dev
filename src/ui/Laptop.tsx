@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import * as THREE from 'three';
+import * as THREE from "three";
 import React, {
   Suspense,
   useEffect,
   useLayoutEffect,
   useRef,
   useState,
-} from 'react';
-import { Canvas, useFrame, type ThreeEvent } from '@react-three/fiber';
+} from "react";
+import { Canvas, useFrame, type ThreeEvent } from "@react-three/fiber";
 import {
   Environment,
   useGLTF,
   ContactShadows,
   OrbitControls,
-} from '@react-three/drei';
-import { a as three } from '@react-spring/three';
-import { a as web, useSpring } from '@react-spring/web';
-import { HiChevronDoubleDown } from 'react-icons/hi';
+} from "@react-three/drei";
+import { a as three } from "@react-spring/three";
+import { a as web, useSpring } from "@react-spring/web";
+import { HiChevronDoubleDown } from "react-icons/hi";
 
 interface ModelProps {
   src: string;
@@ -43,7 +43,7 @@ const Model: React.FC<ModelProps> = ({
   });
 
   useEffect(
-    () => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'),
+    () => void (document.body.style.cursor = hovered ? "pointer" : "auto"),
     [hovered]
   );
   // Make it float in the air when it's opened
@@ -87,15 +87,15 @@ const Model: React.FC<ModelProps> = ({
         <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh
             material={materials.aluminium}
-            geometry={nodes['Cube008'].geometry}
+            geometry={nodes["Cube008"].geometry}
           />
           <mesh
-            material={materials['matte.001']}
-            geometry={nodes['Cube008_1'].geometry}
+            material={materials["matte.001"]}
+            geometry={nodes["Cube008_1"].geometry}
           />
           <mesh
-            material={materials['screen.001']}
-            geometry={nodes['Cube008_2'].geometry}
+            material={materials["screen.001"]}
+            geometry={nodes["Cube008_2"].geometry}
           />
         </group>
       </three.group>
@@ -107,11 +107,11 @@ const Model: React.FC<ModelProps> = ({
       <group position={[0, -0.1, 3.39]}>
         <mesh
           material={materials.aluminium}
-          geometry={nodes['Cube002'].geometry}
+          geometry={nodes["Cube002"].geometry}
         />
         <mesh
           material={materials.trackpad}
-          geometry={nodes['Cube002_1'].geometry}
+          geometry={nodes["Cube002_1"].geometry}
         />
       </group>
       <mesh
@@ -136,41 +136,44 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
     if (open === false) setOpen(true);
   };
 
-  const bgAnimate = useSpring({
-    background: open ? '#ffffff' : '#ffffff',
-  });
+  // const bgAnimate = useSpring({
+  //   background: open ? '#ffffff' : '#ffffff',
+  // });
 
   const btnAnimate = useSpring({
-    opacity: open ? '1' : '0',
-    translateY: open ? '0px' : '100px',
+    opacity: open ? "1" : "0",
+    translateY: open ? "0px" : "100px",
   });
 
   const clickAnimate = useSpring({
-    opacity: open ? '0' : '1',
-    translateY: open ? '100px' : '0px',
-    display: open ? 'none' : 'flex',
+    opacity: open ? "0" : "1",
+    translateY: open ? "100px" : "0px",
+    display: open ? "none" : "flex",
   });
 
   const downAnimate = useSpring({
-    from: { translateY: '10px' },
-    to: { translateY: '10px' },
+    from: { translateY: "10px" },
+    to: { translateY: "10px" },
   });
 
   const dragMeAnimate = useSpring({
-    opacity: open ? '0.2' : '0',
-    translateY: open ? '0px' : '100px',
+    opacity: open ? "0.3" : "0",
+    translateY: open ? "0px" : "100px",
   });
 
   return (
-    <web.main style={bgAnimate} className='h-full relative'>
+    <web.main
+      // style={bgAnimate}
+      className="relative h-full dark:bg-neutral-900 dark:text-neutral-200"
+    >
       <web.div
-        className='text-4xl text-black absolute font-extrabold top-4 left-0 w-full flex justify-center items-center tracking-widest cursor-pointer'
+        className="absolute top-9 left-0 w-full text-center text-4xl font-extrabold tracking-widest text-black dark:text-neutral-200"
         style={dragMeAnimate}
       >
         DRAG ME
       </web.div>
       <Canvas
-        className='absolute top-0 left-0 w-full h-full'
+        className="absolute top-0 left-0 h-full w-full"
         dpr={[1, 2]}
         camera={{ position: [0, 0, -30], fov: 22 }}
       >
@@ -183,7 +186,7 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
               hinge={spring.open.to([0, 1], [1.575, -0.4])}
             />
           </group>
-          <Environment preset='city' />
+          <Environment preset="city" />
         </Suspense>
         <ContactShadows
           position={[0, -4.5, 0]}
@@ -201,18 +204,18 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
         />
       </Canvas>
       <web.div
-        className='text-4xl absolute font-extrabold top-0 left-0 w-full h-full flex flex-col justify-end items-center tracking-widest cursor-pointer pb-24'
+        className="absolute top-0 left-0 flex h-full w-full cursor-pointer flex-col items-center justify-end pb-24 text-4xl font-extrabold tracking-widest"
         style={clickAnimate}
         onClick={() => setOpen(true)}
       >
         CLICK ME
-        <div className='hover:translate-y-1 transition-all duration-500'>
+        <div className="transition-all duration-500 hover:translate-y-1">
           <HiChevronDoubleDown />
         </div>
       </web.div>
       <web.button
         className={
-          'absolute top-4 right-4 font-bold text-black py-2 px-4 tracking-widest'
+          "absolute top-4 right-4 py-2 px-4 font-bold tracking-widest text-black dark:text-neutral-200"
         }
         style={btnAnimate}
         onClick={() => {
@@ -225,14 +228,14 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
       </web.button>
       <web.button
         className={
-          'absolute top-4 left-4 font-bold text-black py-2 px-4 tracking-widest'
+          "absolute top-4 left-4 py-2 px-4 font-bold tracking-widest text-black dark:text-neutral-200"
         }
         style={btnAnimate}
         onClick={() => {
           setIsZoom(!isZoom);
         }}
       >
-        {isZoom ? 'UNZOOM' : 'ZOOM'}
+        {isZoom ? "UNZOOM" : "ZOOM"}
       </web.button>
     </web.main>
   );

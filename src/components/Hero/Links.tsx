@@ -12,7 +12,7 @@ const Links = () => {
       {links.map((link, index) => (
         <div
           key={index}
-          className='cursor-pointer hover:text-black transition-all duration-300'
+          className='cursor-pointer hover:text-black transition-all duration-300 dark:hover:text-white'
           onMouseEnter={() => setIsMouseEnter(true)}
           onMouseLeave={() => setIsMouseEnter(false)}
         >

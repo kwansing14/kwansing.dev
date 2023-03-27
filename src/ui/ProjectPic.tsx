@@ -33,12 +33,12 @@ const ProjectPic: React.FC<Prop> = ({ web, mobile }) => {
     });
 
     tl.to(macRef.current, {
-      translateY: '-70px',
+      translateY: '-20px',
       ease: 'none',
     });
 
     tl2.to(mobileRef.current, {
-      translateY: '-120px',
+      translateY: '-40px',
       ease: 'none',
     });
   }, []);

@@ -3,18 +3,18 @@ import AlephLabs from './AlephLabs';
 import KnoxDao from './KnoxDao';
 
 const GreyBorder = () => {
-  return <div className='h-0.5 bg-slate-200 my-12' />;
+  return <div className='h-0.5 bg-neutral-200 my-12 dark:bg-neutral-500' />;
 };
 
 const Projects = () => {
   return (
-    <div className='mt-16 px-14'>
+    <div className='mt-16 px-14 '>
       <Portfolio2022 />
       <GreyBorder />
       <AlephLabs />
       <GreyBorder />
       <KnoxDao />
-      <div className='bg-black h-1.5 mt-16 w-full' />
+      <div className='bg-black h-1.5 mt-16 w-full dark:bg-neutral-200' />
     </div>
   );
 };
