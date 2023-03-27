@@ -8,20 +8,20 @@ const Blogs = () => {
   const blogsList = [
     {
       index: "01",
-      name: "blog1",
-      content: "lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      name: "WIP",
+      content: "place holder for future blog post",
     },
-    {
-      index: "02",
-      name: "blog2",
-      content:
-        "lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum m lorem ipsum lorem ipsum lorem ipsum",
-    },
-    {
-      index: "03",
-      name: "blog3",
-      content: "lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    },
+    // {
+    //   index: "02",
+    //   name: "blog2",
+    //   content:
+    //     "lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum m lorem ipsum lorem ipsum lorem ipsum",
+    // },
+    // {
+    //   index: "03",
+    //   name: "blog3",
+    //   content: "lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    // },
   ];
   return (
     <div className="mt-16 px-14">

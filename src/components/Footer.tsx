@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-end text-slate-400  dark:text-neutral-700">
-        Built with Next13, Tailwind, ThreeJS, with React Server Component.
+        Built with Next13 RSC, Tailwind, ThreeJS, GSAP, Lenis.
       </div>
     </div>
   );
