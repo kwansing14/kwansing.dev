@@ -11,8 +11,11 @@ specifiers:
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@types/three': ^0.149.0
+  '@wits/next-themes': ^0.2.16
   autoprefixer: ^10.4.14
   clsx: ^1.2.1
+  cookie-cutter: ^0.2.0
+  cookies-next: ^2.1.1
   eslint: 8.36.0
   eslint-config-next: 13.2.4
   gsap: ^3.11.5
@@ -39,7 +42,10 @@ dependencies:
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@types/three': 0.149.0
+  '@wits/next-themes': 0.2.16_ld2jel3hspngo3u5lti2kgl2sq
   clsx: 1.2.1
+  cookie-cutter: 0.2.0
+  cookies-next: 2.1.1
   eslint: 8.36.0
   eslint-config-next: 13.2.4_j4766f7ecgqbon3u7zlxn5zszu
   gsap: 3.11.5
@@ -559,8 +565,16 @@ packages:
       tslib: 2.5.0
     dev: false
 
+  /@types/cookie/0.4.1:
+    resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
+    dev: false
+
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz}
+    dev: false
+
+  /@types/node/16.18.21:
+    resolution: {integrity: sha512-TassPGd0AEZWA10qcNnXnSNwHlLfSth8XwUaWc3gTSDmBz/rKb613Qw5qRf6o2fdRBrLbsgeC9PMZshobkuUqg==}
     dev: false
 
   /@types/node/18.15.3:
@@ -692,6 +706,18 @@ packages:
 
   /@webgpu/glslang/0.0.15:
     resolution: {integrity: sha512-niT+Prh3Aff8Uf1MVBVUsaNjFj9rJAKDXuoHIKiQbB+6IUP/3J3JIhBNyZ7lDhytvXxw6ppgnwKZdDJ08UMj4Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/@webgpu/glslang/-/glslang-0.0.15.tgz}
+    dev: false
+
+  /@wits/next-themes/0.2.16_ld2jel3hspngo3u5lti2kgl2sq:
+    resolution: {integrity: sha512-tf2C7fE28JSOdE5fi4cUV3V5HT7viBahG6sh6G2V/VdzPinaXX5J5hTWuOhmfUnWuitU1JU7N1wIQe1q17SLUA==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 13.2.4_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /acorn-jsx/5.3.2_acorn@8.8.2:
@@ -1013,6 +1039,23 @@ packages:
 
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz}
+    dev: false
+
+  /cookie-cutter/0.2.0:
+    resolution: {integrity: sha512-eVyP5liHjDMCmGlp2OD+qoin5TJlwUBRjBKN8R2yJ3ePf8xqUtqmRP6e36ipe0nBm2lTiertH6iHPOptNQzAEw==}
+    dev: false
+
+  /cookie/0.4.2:
+    resolution: {integrity: sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==}
+    engines: {node: '>= 0.6'}
+    dev: false
+
+  /cookies-next/2.1.1:
+    resolution: {integrity: sha512-AZGZPdL1hU3jCjN2UMJTGhLOYzNUN9Gm+v8BdptYIHUdwz397Et1p+sZRfvAl8pKnnmMdX2Pk9xDRKCGBum6GA==}
+    dependencies:
+      '@types/cookie': 0.4.1
+      '@types/node': 16.18.21
+      cookie: 0.4.2
     dev: false
 
   /cross-spawn/6.0.5:

@@ -1,8 +1,8 @@
-'use client';
-import { useRef, useEffect } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+"use client";
+import { useRef, useEffect } from "react";
+import Image, { StaticImageData } from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 interface Prop {
   web: StaticImageData;
   mobile: StaticImageData;
@@ -17,8 +17,8 @@ const ProjectPic: React.FC<Prop> = ({ web, mobile }) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: macRef.current,
-        start: 'bottom bottom',
-        end: 'center top',
+        start: "bottom bottom",
+        end: "center top",
         scrub: true,
       },
     });
@@ -26,36 +26,36 @@ const ProjectPic: React.FC<Prop> = ({ web, mobile }) => {
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: mobileRef.current,
-        start: 'bottom bottom',
-        end: 'center top',
+        start: "bottom bottom",
+        end: "center top",
         scrub: true,
       },
     });
 
     tl.to(macRef.current, {
-      translateY: '-20px',
-      ease: 'none',
+      translateY: "-25px",
+      ease: "none",
     });
 
     tl2.to(mobileRef.current, {
-      translateY: '-40px',
-      ease: 'none',
+      translateY: "-40px",
+      ease: "none",
     });
   }, []);
 
   return (
-    <div className='w-6/12 h-144 relative translate-y-16'>
+    <div className="relative h-144 w-6/12 translate-y-16">
       <Image
         ref={macRef}
-        className='absolute top-0 left-0 translate-x-8'
+        className="absolute top-0 left-0 translate-x-8"
         src={web}
-        alt='webSS'
+        alt="webSS"
       />
       <Image
         ref={mobileRef}
-        className='absolute top-0 left-0 -translate-x-1/3 scale-75 translate-y-16'
+        className="absolute top-0 left-0 -translate-x-1/3 translate-y-16 scale-75"
         src={mobile}
-        alt='mobileSS'
+        alt="mobileSS"
       />
     </div>
   );

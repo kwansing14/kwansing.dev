@@ -1,15 +1,16 @@
-import Template from './Template';
-import knoxweb from '@public/static/knoxweb.png';
-import knoxmobile from '@public/static/knoxmobile.png';
+import Template from "./Template";
+import knoxweb from "@public/static/knoxweb.png";
+import knoxmobile from "@public/static/knoxmobile.png";
+import AText from "@/ui/AText";
 
 const KnoxDao = () => {
   return (
-    <Template title={'KnoxDAO'} web={knoxweb} mobile={knoxmobile}>
-      <div>
+    <Template title={"KnoxDAO"} web={knoxweb} mobile={knoxmobile}>
+      <AText>
         KnoxDAO is a project that aims to create a decentralized, secure, and
         accessible DAO built on Celo chain.
-      </div>
-      <div>
+      </AText>
+      <AText>
         I am the main developer for KnoxDAO. Developed the frontend for KnoxDAO
         using NextJS. And written 4 smart contracts for KnoxDAO. ERC721 -
         Knoxers , a set of NFTS given to the community, representing the
@@ -18,7 +19,7 @@ const KnoxDao = () => {
         to use as profile pic. ERC20 - KUSD, tokens. emitted to Knoxer holders.
         ERC721 - KnoxWorld fully on chain, no ipfs, include assembling and
         dissassembling functions, serves as a educational platform.
-      </div>
+      </AText>
     </Template>
   );
 };

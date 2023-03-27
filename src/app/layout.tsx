@@ -1,6 +1,8 @@
 import "./globals.css";
 import Script from "next/script";
-import Head from "next/head";
+import { ServerThemeProvider } from "@wits/next-themes";
+import ThemeWrapper from "@/components/ThemeWrapper";
+
 export const metadata = {
   title: "Kwan Sing - Portfolio",
   description: "Frontend Developer",
@@ -12,15 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <Head>
-        <Script src="/theme.js" strategy="beforeInteractive" />
-      </Head>
-      <Script
-        type="text/javascript"
-        src="https://unpkg.com/default-passive-events"
-      />
-      <body>{children}</body>
-    </html>
+    <ServerThemeProvider attribute="class">
+      <html lang="en" suppressHydrationWarning>
+        <Script
+          id="passiveEvents"
+          type="text/javascript"
+          src="https://unpkg.com/default-passive-events"
+          async
+        />
+        <body>
+          <ThemeWrapper>{children}</ThemeWrapper>
+        </body>
+      </html>
+    </ServerThemeProvider>
   );
 }

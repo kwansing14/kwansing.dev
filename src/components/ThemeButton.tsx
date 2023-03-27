@@ -1,23 +1,32 @@
 "use client";
-import { useTheme } from "@/hooks/useTheme";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
+import { useTheme } from "@wits/next-themes";
+import { useEffect, useState } from "react";
 
-const ThemeSwitch = () => {
-  const [theme, setTheme] = useTheme();
-
+const ThemeSwitch: React.FC = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const handleClick = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
+  // use mounted to solve hydration error some weird theme bug
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <div className="flex justify-end">
       <button
-        className="flex items-center gap-2 pr-4 pt-8"
+        className="flex h-16 items-center gap-2 pr-8"
         onClick={handleClick}
       >
-        {theme === "dark" ? "Dark" : "Light"}
-        {theme === "dark" ? <MdDarkMode /> : <MdLightMode />}
+        {mounted && (
+          <>
+            {theme === "dark" ? "Dark" : "Light"}
+            {theme === "dark" ? <MdDarkMode /> : <MdLightMode />}
+          </>
+        )}
       </button>
     </div>
   );

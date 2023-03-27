@@ -4,8 +4,8 @@ import Projects from "@/components/Projects";
 import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
 import LenisWrapper from "@/components/LenisWrapper";
-// import ThemeWrapper from '@/components/ThemeWrapper';
 import ThemeButton from "@/components/ThemeButton";
+
 const SofiaSans = Sofia_Sans({ subsets: ["latin"] });
 
 export default function Home() {
