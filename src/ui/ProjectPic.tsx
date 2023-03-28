@@ -44,16 +44,16 @@ const ProjectPic: React.FC<Prop> = ({ web, mobile }) => {
   }, []);
 
   return (
-    <div className="relative h-144 w-6/12 translate-y-16">
+    <div className="relative aspect-video w-full -translate-y-8 lg:h-144 lg:w-6/12 lg:translate-y-16">
       <Image
         ref={macRef}
-        className="absolute top-0 left-0 translate-x-8"
+        className="absolute top-0 left-0 translate-x-2 lg:translate-x-8"
         src={web}
         alt="webSS"
       />
       <Image
         ref={mobileRef}
-        className="absolute top-0 left-0 -translate-x-1/3 translate-y-16 scale-75"
+        className="absolute top-0 left-0 -translate-x-20 translate-y-16 scale-75 min-[300px]:-translate-x-1/3"
         src={mobile}
         alt="mobileSS"
       />

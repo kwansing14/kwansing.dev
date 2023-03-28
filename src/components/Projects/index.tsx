@@ -1,20 +1,20 @@
-import Portfolio2022 from '@/components/Projects/Portfolio2022';
-import AlephLabs from './AlephLabs';
-import KnoxDao from './KnoxDao';
+import Portfolio2022 from "@/components/Projects/Portfolio2022";
+import AlephLabs from "./AlephLabs";
+import KnoxDao from "./KnoxDao";
 
 const GreyBorder = () => {
-  return <div className='h-0.5 bg-neutral-200 my-12 dark:bg-neutral-500' />;
+  return <div className="my-12 h-0.5 bg-neutral-200 dark:bg-neutral-500" />;
 };
 
 const Projects = () => {
   return (
-    <div className='mt-16 px-14 '>
+    <div className="mt-8 px-4 md:mt-16 md:px-14 ">
       <Portfolio2022 />
       <GreyBorder />
       <AlephLabs />
       <GreyBorder />
       <KnoxDao />
-      <div className='bg-black h-1.5 mt-16 w-full dark:bg-neutral-200' />
+      <div className="mt-8 h-1.5 w-full bg-black dark:bg-neutral-200 md:mt-16" />
     </div>
   );
 };

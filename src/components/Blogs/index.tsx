@@ -9,14 +9,15 @@ const Blogs = () => {
     {
       index: "01",
       name: "WIP",
-      content: "place holder for future blog post",
+      content:
+        "work in progress - placeholder for future blog post number one.",
     },
-    // {
-    //   index: "02",
-    //   name: "blog2",
-    //   content:
-    //     "lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum m lorem ipsum lorem ipsum lorem ipsum",
-    // },
+    {
+      index: "02",
+      name: "WIP2",
+      content:
+        "work in progress2 - placeholder for future blog post number two",
+    },
     // {
     //   index: "03",
     //   name: "blog3",
@@ -24,32 +25,32 @@ const Blogs = () => {
     // },
   ];
   return (
-    <div className="mt-16 px-14">
-      <div className="mb-8 text-7xl font-bold">
+    <div className="mt-8 px-4 md:mt-16 md:px-14">
+      <div className="mb-4 text-5xl font-bold md:mb-8 md:text-7xl">
         <AText>Blogs</AText>
       </div>
       {blogsList.map((blog, index) => (
-        <div key={index} className="flex h-32">
+        <div key={index} className="flex h-16 md:h-32">
           <div
             className={
-              "flex w-1/12 items-center justify-start text-sm" +
+              "flex w-2/12 items-center justify-center pr-4 text-sm md:w-1/12 md:justify-start" +
               ` ${RobotoMono.className}`
             }
           >
             {blog.index}
           </div>
-          <div className="w-11/12">
+          <div className="w-10/12 md:w-11/12">
             <Seperator>
               <div className="flex h-full w-full items-center justify-start">
                 <div
                   className={
-                    "w-3/12 cursor-pointer text-3xl text-slate-800 dark:text-neutral-200"
+                    "w-3/12 cursor-pointer text-xl text-slate-800 dark:text-neutral-200 md:text-3xl"
                   }
                 >
                   {blog.name}
                 </div>
                 <div className="w-9/12">
-                  <div className="w-128 cursor-pointer text-slate-500 dark:text-neutral-400">
+                  <div className="w-auto cursor-pointer truncate text-slate-500 dark:text-neutral-400 md:w-128">
                     {blog.content}
                   </div>
                 </div>
@@ -58,7 +59,7 @@ const Blogs = () => {
           </div>
         </div>
       ))}
-      <div className="mt-16 h-1.5 w-full bg-black dark:bg-neutral-200" />
+      <div className="mt-8 h-1.5 w-full bg-black dark:bg-neutral-200 md:mt-16" />
     </div>
   );
 };

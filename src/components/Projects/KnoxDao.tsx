@@ -6,11 +6,11 @@ import AText from "@/ui/AText";
 const KnoxDao = () => {
   return (
     <Template title={"KnoxDAO"} web={knoxweb} mobile={knoxmobile}>
-      <AText>
+      <AText noskew>
         KnoxDAO is a project that aims to create a decentralized, secure, and
         accessible DAO built on Celo chain.
       </AText>
-      <AText>
+      <AText noskew>
         I am the main developer for KnoxDAO. Developed the frontend for KnoxDAO
         using NextJS. And written 4 smart contracts for KnoxDAO. ERC721 -
         Knoxers , a set of NFTS given to the community, representing the
