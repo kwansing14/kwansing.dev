@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-end text-slate-400  dark:text-neutral-700">
-        Built with Next13 RSC, Tailwind, ThreeJS, GSAP, Lenis.
+        Built with Next13 RSC with Tailwind.
       </div>
     </div>
   );

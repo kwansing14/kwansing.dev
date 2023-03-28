@@ -11,6 +11,15 @@ module.exports = {
         136: "34rem",
         144: "36rem",
       },
+      keyframes: {
+        fadein: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
+      animation: {
+        "fade-in": "fadein 0.5s ease-in-out forwards",
+      },
     },
   },
   darkMode: "class",

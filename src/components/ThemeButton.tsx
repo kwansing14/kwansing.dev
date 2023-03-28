@@ -17,15 +17,12 @@ const ThemeSwitch: React.FC = () => {
 
   return (
     <div className="flex justify-end">
-      <button
-        className="flex h-16 items-center gap-2 pr-8"
-        onClick={handleClick}
-      >
+      <button className="flex h-16 items-center pr-8" onClick={handleClick}>
         {mounted && (
-          <>
+          <div className="flex animate-fade-in items-center gap-2">
             {theme === "dark" ? "Dark" : "Light"}
             {theme === "dark" ? <MdDarkMode /> : <MdLightMode />}
-          </>
+          </div>
         )}
       </button>
     </div>
