@@ -11,14 +11,21 @@ const KnoxDao = () => {
         accessible DAO built on Celo chain.
       </AText>
       <AText noskew>
-        I am the main developer for KnoxDAO. Developed the frontend for KnoxDAO
-        using NextJS. And written 4 smart contracts for KnoxDAO. ERC721 -
-        Knoxers , a set of NFTS given to the community, representing the
-        different roles of each community members. ERC721 - Shiki, a randomly
-        generated 300 collections of art distributed to the community for free
-        to use as profile pic. ERC20 - KUSD, tokens. emitted to Knoxer holders.
-        ERC721 - KnoxWorld fully on chain, no ipfs, include assembling and
-        dissassembling functions, serves as a educational platform.
+        Main developer for KnoxDAO. Developed the frontend for KnoxDAO using
+        NextJS. And written 4 smart contracts for KnoxDAO.
+      </AText>
+      <AText noskew>
+        ERC721 - Knoxers & Shiki, random generated 300 collections of pixel art
+        distributed to the community for free to use as profile pic and able to
+        generate ERC20 token based on Knoxers Tier.
+      </AText>
+      <AText noskew>
+        ERC20 - KUSD, tokens. emitted to Knoxer holders, for DAO voting.
+      </AText>
+      <AText noskew>
+        ERC721 - KnoxWorld fully, on chain art, no ipfs, each NFT blocks are
+        reversable as it can be assemble + disassemble, to serves as a
+        collaborative blocks serve as Refi Education.
       </AText>
     </Template>
   );
