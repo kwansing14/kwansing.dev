@@ -24,7 +24,7 @@ const AText: React.FC<{
         translateY: "-5",
         opacity: 1,
         duration: 1,
-        delay: 0.5 + delay,
+        delay: 0.25 + delay,
         skewY: 0,
         ease: "power4",
         scrollTrigger: delay ? undefined : t,
