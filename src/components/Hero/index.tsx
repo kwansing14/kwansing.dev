@@ -19,10 +19,12 @@ const Hero = () => {
               </Link>
             </div>
             <div className="mt-6 text-2xl font-bold leading-tight md:text-4xl">
-              <AText>/Software Developer</AText>
+              <AText skew>/Software Developer</AText>
             </div>
             <div className="text-2xl font-bold leading-tight md:text-4xl">
-              <AText delay={0.5}>/Frontend Developer</AText>
+              <AText skew delay={0.5}>
+                /Frontend Developer
+              </AText>
             </div>
             <div className="mt-4 lg:mt-12">
               <Links />

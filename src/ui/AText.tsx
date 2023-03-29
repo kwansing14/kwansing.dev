@@ -6,8 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const AText: React.FC<{
   children: string;
   delay?: number;
-  noskew?: boolean;
-}> = ({ children, delay = 0, noskew }) => {
+  skew?: boolean;
+}> = ({ children, delay = 0, skew }) => {
   // keyframe usage
   const ref = useRef(null);
   useEffect(() => {
@@ -18,7 +18,7 @@ const AText: React.FC<{
       {
         translateY: "120%",
         opacity: 0,
-        skewY: noskew ? 0 : 5,
+        skewY: skew ? 5 : 0,
       },
       {
         translateY: "-5",
