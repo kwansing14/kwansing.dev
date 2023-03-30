@@ -1,4 +1,4 @@
-import Portfolio2022 from "@/components/Projects/Portfolio2022";
+import Portfolio2022 from "@/components/Home/Projects/Portfolio2022";
 import AlephLabs from "./AlephLabs";
 import KnoxDao from "./KnoxDao";
 

@@ -50,12 +50,14 @@ const ProjectPic: React.FC<Prop> = ({ web, mobile }) => {
         className="absolute top-0 left-0 translate-x-2 lg:translate-x-8"
         src={web}
         alt="webSS"
+        priority
       />
       <Image
         ref={mobileRef}
         className="absolute top-0 left-0 -translate-x-20 translate-y-16 scale-75 min-[300px]:-translate-x-1/3"
         src={mobile}
         alt="mobileSS"
+        priority
       />
     </div>
   );

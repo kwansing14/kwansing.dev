@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Links from "@/components/Hero/Links";
+import Links from "@/components/Home/Hero/Links";
 import AText from "@/ui/AText";
 import dynamic from "next/dynamic";
+const Laptop = dynamic(() => import("@/ui/Laptop"), { ssr: false });
 
 const Hero = () => {
-  const Laptop = dynamic(() => import("@/ui/Laptop"), { ssr: false });
   return (
     <div className="px-4 lg:px-14">
       <div className="flex flex-col items-end lg:flex-row">

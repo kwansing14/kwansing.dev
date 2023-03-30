@@ -1,4 +1,4 @@
-import Seperator from "@/components/Blogs/Seperator";
+import Seperator from "@/components/Home/Blogs/Seperator";
 import { Roboto_Mono } from "next/font/google";
 import AText from "@/ui/AText";
 

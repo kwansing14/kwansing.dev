@@ -1,6 +1,6 @@
-'use client';
-import { ReactNode, useState } from 'react';
-import { DarkenBar } from '@/ui/LinkBar';
+"use client";
+import { ReactNode, useState } from "react";
+import { DarkenBar } from "@/ui/LinkBar";
 
 interface Prop {
   children: ReactNode;
@@ -12,7 +12,7 @@ const Seperator: React.FC<Prop> = ({ children }) => {
     <div
       onMouseEnter={() => setIsMouseEnter(true)}
       onMouseLeave={() => setIsMouseEnter(false)}
-      className='w-full h-full'
+      className="h-full w-full"
     >
       <DarkenBar isMouseEnter={isMouseEnter} />
       {children}
