@@ -4,9 +4,7 @@ import Blogs from "@/components/Home/Blogs";
 import Footer from "@/components/Footer";
 import LenisWrapper from "@/components/LenisWrapper";
 import ThemeButton from "@/components/ThemeButton";
-
-import { Sofia_Sans } from "next/font/google";
-const SofiaSans = Sofia_Sans({ subsets: ["latin"] });
+import SofiaSans from "@/font/sofia-sans";
 
 export default function Home() {
   return (

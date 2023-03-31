@@ -22,6 +22,8 @@ export default function RootLayout({
           src="https://unpkg.com/default-passive-events"
           async
         />
+        {/* <Script src="/path/to/highlight.min.js" />
+        <Script>hljs.highlightAll();</Script> */}
         {/* favicon */}
         <link
           rel="apple-touch-icon"

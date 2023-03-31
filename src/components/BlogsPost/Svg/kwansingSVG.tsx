@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 
-export const KwanSingSVG3: React.FC = () => {
+const KwanSingSVG: React.FC = () => {
   // Create a GreenSock timeline that will repeat infinitely
   const tl = gsap.timeline({
     id: "Timeline",
@@ -12,7 +12,7 @@ export const KwanSingSVG3: React.FC = () => {
   });
 
   const colors = ["#e97777", "#ffc777", "#fffad7"];
-  function tween(node: any) {
+  const tween = (node: any) => {
     let path = node;
     const delay = Math.random() * 1;
     const length = path.getTotalLength();
@@ -37,22 +37,21 @@ export const KwanSingSVG3: React.FC = () => {
           strokeDashoffset: 0,
           autoRound: false,
           duration: 1.7,
-          ease: "power3.out",
+          ease: "power4",
         },
         index * 0.25 + delay
       );
     });
-  }
+  };
 
   useEffect(() => {
-    document
-      .querySelectorAll(".motion path, .motion line")
-      .forEach((p) => tween(p));
+    const lines = document.querySelectorAll(".motion path, .motion line");
+    lines.forEach((p) => tween(p));
   }, []);
 
   return (
     <svg
-      className="motion"
+      className="motion" // add motion className here
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       stroke="#000"
@@ -95,3 +94,5 @@ export const KwanSingSVG3: React.FC = () => {
     </svg>
   );
 };
+
+export default KwanSingSVG;
