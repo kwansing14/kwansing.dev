@@ -1,4 +1,4 @@
-import SvgAnimation from "@/components/BlogsPost/Svg/SvgAnimation";
+import SvgAnimation from "@/components/BlogPost/svganimation";
 
 const Blog = () => {
   return <SvgAnimation />;

@@ -3,7 +3,7 @@ import { Roboto_Mono } from "next/font/google";
 import AText from "@/ui/AText";
 import Link from "next/link";
 
-const RobotoMono = Roboto_Mono({ subsets: ["latin"] });
+const RobotoMono = Roboto_Mono({ subsets: ["latin"], fallback: ["system-ui"] });
 
 const Blogs = () => {
   const blogsList = [
@@ -15,9 +15,9 @@ const Blogs = () => {
     },
     {
       index: "02",
-      name: "WIP2",
-      content:
-        "work in progress2 - placeholder for future blog post number two",
+      name: "Journal GPT",
+      content: "Integrated GPT into Daily Journals for Alephians.",
+      href: "/blog/journal-gpt",
     },
   ];
   return (
