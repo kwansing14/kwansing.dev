@@ -9,15 +9,15 @@ const Blogs = () => {
   const blogsList = [
     {
       index: "01",
-      name: "Animated SVG",
-      content: "Creating animated SVG with any word using GSAP.",
-      href: "/blog/svg-animation",
-    },
-    {
-      index: "02",
       name: "Journal GPT",
       content: "Integrated GPT into Daily Journals for Alephians.",
       href: "/blog/journal-gpt",
+    },
+    {
+      index: "02",
+      name: "Animated SVG",
+      content: "Creating animated SVG with any word using GSAP.",
+      href: "/blog/svg-animation",
     },
   ];
   return (

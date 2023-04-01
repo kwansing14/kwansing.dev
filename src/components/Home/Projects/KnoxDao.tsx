@@ -28,7 +28,7 @@ const KnoxDao = () => {
         ERC20 - KUSD, tokens. emitted to Knoxer holders, for DAO voting.
       </AText>
       <AText>
-        ERC721 - KnoxWorld fully, on chain art, no ipfs, each NFT blocks are
+        ERC721 - KnoxWorld fully on chain art, no ipfs, each NFT blocks are
         reversable as it can be assemble + disassemble, to serves as a
         collaborative blocks for Refi Education.
       </AText>

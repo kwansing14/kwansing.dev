@@ -27,10 +27,11 @@ const Journalgpt: React.FC = () => {
         So I decided to build a tool to help me, by only entering a few
         keypoints, and auto generating a well constructed email to send.
       </div>
-      <div>First I created 4 textarea for users to input.</div>
+      <div>First I created 4 text area for users to input.</div>
       <T.Image src="/blogs/journalgpt/3.png" />
       <div>Modified user inputs into prompts for ai.</div>
       <T.Code code={code1} />
+      <div className="text-xl">TRPC</div>
       <div>
         Here I am using trpc to pass the modified prompts to serverless function
         backend.
