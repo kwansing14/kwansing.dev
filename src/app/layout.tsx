@@ -3,7 +3,6 @@ import Script from "next/script";
 import { ServerThemeProvider } from "@wits/next-themes";
 import ThemeWrapper from "@/components/ThemeWrapper";
 import LenisWrapper from "@/components/LenisWrapper";
-import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Kwan Sing - Portfolio",
@@ -62,7 +61,6 @@ export default function RootLayout({
           <ThemeWrapper>
             <LenisWrapper>{children}</LenisWrapper>
           </ThemeWrapper>
-          <Analytics />
         </body>
       </html>
     </ServerThemeProvider>

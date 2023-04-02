@@ -27,7 +27,7 @@ specifiers:
   prettier: ^2.8.4
   prettier-plugin-tailwindcss: ^0.2.5
   prismjs: ^1.29.0
-  react: link:@vercel/analytics/react
+  react: 18.2.0
   react-dom: 18.2.0
   react-icons: ^4.8.0
   react-markdown: ^8.0.6
@@ -3208,7 +3208,7 @@ packages:
     dev: false
 
   /react/18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/react/-/react-18.2.0.tgz}
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
