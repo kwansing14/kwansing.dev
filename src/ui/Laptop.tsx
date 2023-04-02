@@ -1,13 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import React, {
-  Suspense,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame, type ThreeEvent } from "@react-three/fiber";
 import {
   Environment,
@@ -151,21 +145,13 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
     display: open ? "none" : "flex",
   });
 
-  const downAnimate = useSpring({
-    from: { translateY: "10px" },
-    to: { translateY: "10px" },
-  });
-
   const dragMeAnimate = useSpring({
     opacity: open ? "0.3" : "0",
     translateY: open ? "0px" : "100px",
   });
 
   return (
-    <web.main
-      // style={bgAnimate}
-      className="relative h-full dark:bg-neutral-900 dark:text-neutral-200"
-    >
+    <web.main className="relative h-full dark:bg-neutral-900 dark:text-neutral-200">
       <web.div
         className="absolute top-9 left-0 w-full text-center text-4xl font-extrabold tracking-widest text-black dark:text-neutral-200"
         style={dragMeAnimate}
@@ -242,3 +228,5 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
 };
 
 export default Laptop;
+
+useGLTF.preload("/mac/mac-portfolio2023.gltf");
