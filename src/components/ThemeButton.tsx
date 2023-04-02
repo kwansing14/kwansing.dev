@@ -5,7 +5,7 @@ import { useTheme } from "@wits/next-themes";
 import { useEffect, useState } from "react";
 
 const ThemeSwitch: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const handleClick = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -13,6 +13,8 @@ const ThemeSwitch: React.FC = () => {
   // use mounted to solve hydration error some weird theme bug
   useEffect(() => {
     setMounted(true);
+    resolvedTheme === "dark" && setTheme("dark");
+    resolvedTheme === "light" && setTheme("light");
   }, []);
 
   return (
