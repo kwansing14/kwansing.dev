@@ -5,7 +5,12 @@ import AText from "@/ui/AText";
 
 const Portfolio2022 = () => {
   return (
-    <Template title={"Portfolio 2022"} web={alephweb} mobile={alephmobile}>
+    <Template
+      title={"Portfolio 2022"}
+      web={alephweb}
+      mobile={alephmobile}
+      href="https://kwansing-portfolio.vercel.app/"
+    >
       <AText>
         The portfolio project was built in 2022, and showcasing the projects
         that I had done. The project was created using NextJS, which provides
