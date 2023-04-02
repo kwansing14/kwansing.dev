@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AText from "@/ui/AText";
 
 const Footer = () => {
@@ -7,11 +8,16 @@ const Footer = () => {
         <div className="text-5xl md:text-7xl">
           <AText>Contact Me</AText>
         </div>
-        <div className="mt-8 text-slate-400 underline dark:text-neutral-700 md:mt-16">
+        <Link
+          href="mailto:kwansing@hotmail.sg"
+          className="mt-8 text-slate-400 underline dark:text-neutral-700 md:mt-16"
+        >
           kwansing@hotmail.sg
-        </div>
+        </Link>
         <div className="mt-2 flex gap-8 text-slate-400 dark:text-neutral-700  md:mt-8">
-          <div>LinkedIn</div> <div>Github</div> <div>SoureCode</div>
+          <Link href="https://www.linkedin.com/in/kwansing/">LinkedIn</Link>
+          <Link href="https://github.com/kwansing14">Github</Link>
+          <Link href="/">SoureCode</Link>
         </div>
       </div>
       <div className="mt-6 flex items-end text-slate-400 dark:text-neutral-700 md:mt-0">
