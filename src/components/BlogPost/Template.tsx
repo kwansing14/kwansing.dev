@@ -10,6 +10,10 @@ interface Prop {
   children: React.ReactNode;
 }
 
+const SubtitleTemplate: React.FC<{ children: string }> = ({ children }) => {
+  return <div className="text-2xl font-bold">{children}</div>;
+};
+
 const CodeTemplate: React.FC<{ code: string }> = ({ code }) => {
   return <Code code={code} language="javascript" />;
 };
@@ -66,5 +70,6 @@ export const T = {
   Image: ImageTemplate,
   NumSpan: NumSpanTemplate,
   Code: CodeTemplate,
+  Subtitle: SubtitleTemplate,
 };
 export default Template;

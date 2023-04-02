@@ -2,6 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import { ServerThemeProvider } from "@wits/next-themes";
 import ThemeWrapper from "@/components/ThemeWrapper";
+import LenisWrapper from "@/components/LenisWrapper";
 
 export const metadata = {
   title: "Kwan Sing - Portfolio",
@@ -55,8 +56,11 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/favicon/mstile-150x150.png" />
         <meta property="og:description" content="Kwan Sing's Portfolio" />
+
         <body>
-          <ThemeWrapper>{children}</ThemeWrapper>
+          <ThemeWrapper>
+            <LenisWrapper>{children}</LenisWrapper>
+          </ThemeWrapper>
         </body>
       </html>
     </ServerThemeProvider>
