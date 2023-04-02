@@ -2,7 +2,7 @@
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { useTheme } from "@wits/next-themes";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 
 const ThemeSwitch: React.FC = () => {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -12,9 +12,12 @@ const ThemeSwitch: React.FC = () => {
   };
   // use mounted to solve hydration error some weird theme bug
   useEffect(() => {
+    if (resolvedTheme === "dark") setTheme("dark");
+    if (resolvedTheme === "light") setTheme("light");
+  }, [resolvedTheme]);
+
+  useEffect(() => {
     setMounted(true);
-    resolvedTheme === "dark" && setTheme("dark");
-    resolvedTheme === "light" && setTheme("light");
   }, []);
 
   return (
