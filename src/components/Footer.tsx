@@ -17,7 +17,9 @@ const Footer = () => {
         <div className="mt-2 flex gap-8 text-slate-400 dark:text-neutral-700  md:mt-8">
           <Link href="https://www.linkedin.com/in/kwansing/">LinkedIn</Link>
           <Link href="https://github.com/kwansing14">Github</Link>
-          <Link href="/">SoureCode</Link>
+          <Link href="https://github.com/kwansing14/portfolio-13">
+            SoureCode
+          </Link>
         </div>
       </div>
       <div className="mt-6 flex items-end text-slate-400 dark:text-neutral-700 md:mt-0">
