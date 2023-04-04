@@ -25,7 +25,7 @@ const Template: React.FC<Prop> = ({ title, children, web, mobile, href }) => {
         <div className="mt-2 [&>div]:mt-4">{children}</div>
         <LinkBar>
           <Link
-            className="flex items-center gap-8"
+            className="mt-4 flex items-center gap-8"
             href={href || "/"}
             target={href && "_blank"}
           >

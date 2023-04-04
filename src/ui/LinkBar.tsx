@@ -39,7 +39,7 @@ const LinkBar: React.FC<Props> = ({
 }) => {
   const [isMouseEnter, setIsMouseEnter] = useState(false);
   return (
-    <div className={clsx("flex h-full", { "w-full": fullW })}>
+    <div className={clsx("mt-8 flex h-full", { "w-full": fullW })}>
       <div
         className={clsx("flex h-full flex-col justify-end", {
           "w-full": fullW,
