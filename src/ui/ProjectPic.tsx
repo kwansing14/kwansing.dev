@@ -28,7 +28,7 @@ const ProjectPic: React.FC<Prop> = ({ web, mobile }) => {
         trigger: mobileRef.current,
         start: "bottom bottom",
         end: "center top",
-        scrub: true,
+        scrub: 2,
       },
     });
 
