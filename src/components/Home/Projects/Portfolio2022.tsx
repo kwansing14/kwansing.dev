@@ -13,7 +13,7 @@ const Portfolio2022 = () => {
     >
       <AText>
         The portfolio project was built in 2022, and showcasing the projects
-        that I had done. The project was created using NextJS, which provides
+        that I have done. The project was created using NextJS, which provides
         numerous benefits such as improved performance, better SEO, and
         simplified development.
       </AText>
