@@ -172,11 +172,7 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
               hinge={spring.open.to([0, 1], [1.575, -0.4])}
             />
           </group>
-          <Environment
-            files="https://cdn.jsdelivr.net/gh/Sean-Bradley/React-Three-Fiber-Boilerplate@environment/public/img/venice_sunset_1k.hdr"
-            // preset="city"
-            // preset="warehouse"
-          />
+          <Environment preset="city" />
         </Suspense>
         <ContactShadows
           position={[0, -4.5, 0]}
