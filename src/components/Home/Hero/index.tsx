@@ -31,9 +31,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        {/* <div className="mt-4 h-80 w-full md:h-120 lg:mt-0 lg:w-6/12 xl:h-144">
+        <div className="mt-4 h-80 w-full md:h-120 lg:mt-0 lg:w-6/12 xl:h-144">
           <Laptop src={"/mac/mac-portfolio2023.gltf"} />
-        </div> */}
+        </div>
       </div>
       <div className="mt-16 h-1.5 w-full bg-black dark:bg-white" />
     </div>

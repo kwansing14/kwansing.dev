@@ -56,7 +56,7 @@ const Model: React.FC<ModelProps> = ({
       );
       group.current.rotation.z = THREE.MathUtils.lerp(
         group.current.rotation.z,
-        open ? Math.sin(t / 10) / 10 : 0,
+        open ? Math.sin(t / 15) / 10 : 0,
         0.1
       );
       group.current.position.y = THREE.MathUtils.lerp(
@@ -172,7 +172,11 @@ const Laptop: React.FC<{ src: string }> = ({ src }) => {
               hinge={spring.open.to([0, 1], [1.575, -0.4])}
             />
           </group>
-          <Environment preset="city" />
+          <Environment
+            files="https://cdn.jsdelivr.net/gh/Sean-Bradley/React-Three-Fiber-Boilerplate@environment/public/img/venice_sunset_1k.hdr"
+            // preset="city"
+            // preset="warehouse"
+          />
         </Suspense>
         <ContactShadows
           position={[0, -4.5, 0]}
