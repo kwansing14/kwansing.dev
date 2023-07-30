@@ -13,7 +13,7 @@ const Projects = () => {
       <GreyBorder />
       <AlephLabs />
       <GreyBorder />
-      <KnoxDao />
+      {/* <KnoxDao /> */}
       <div className="mt-8 h-1.5 w-full bg-black dark:bg-neutral-200 md:mt-16" />
     </div>
   );
