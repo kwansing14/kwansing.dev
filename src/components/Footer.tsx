@@ -18,7 +18,7 @@ const Footer = () => {
           <Link href="https://www.linkedin.com/in/kwansing/">LinkedIn</Link>
           <Link href="https://github.com/kwansing14">Github</Link>
           <Link href="https://github.com/kwansing14/portfolio-13">
-            SoureCode
+            SourceCode
           </Link>
         </div>
       </div>
