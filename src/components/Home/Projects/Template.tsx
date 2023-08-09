@@ -9,15 +9,15 @@ import Link from "next/link";
 interface Prop {
   title: string;
   children: ReactNode;
-  web: StaticImageData;
-  mobile: StaticImageData;
+  web: StaticImageData | string;
+  mobile: StaticImageData | string;
   href?: string;
 }
 
 const Template: React.FC<Prop> = ({ title, children, web, mobile, href }) => {
   return (
     <div className="flex h-auto w-full flex-col-reverse lg:h-144 lg:flex-row">
-      <div className="mt-8 mr-4 flex w-full flex-col lg:mt-0 lg:w-6/12">
+      <div className="mt-8 flex w-full flex-col pr-4 lg:mt-0 lg:w-6/12">
         <div className="font-extrabold uppercase tracking-widest">Project</div>
         <div className="mt-6 mb-2 text-5xl font-bold lg:text-7xl">
           <AText>{title}</AText>
@@ -33,7 +33,9 @@ const Template: React.FC<Prop> = ({ title, children, web, mobile, href }) => {
           </Link>
         </LinkBar>
       </div>
-      <ProjectPic web={web} mobile={mobile} />
+      <div className="relative h-64 w-full md:h-96 lg:h-144 lg:w-6/12">
+        <ProjectPic web={web} mobile={mobile} />
+      </div>
     </div>
   );
 };

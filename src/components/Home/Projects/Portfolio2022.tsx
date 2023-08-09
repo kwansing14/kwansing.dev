@@ -6,7 +6,7 @@ import AText from "@/ui/AText";
 const Portfolio2022 = () => {
   return (
     <Template
-      title={"Portfolio 2022"}
+      title="Portfolio 2022"
       web={alephweb}
       mobile={alephmobile}
       href="https://kwansing-portfolio.vercel.app/"

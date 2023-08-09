@@ -2,6 +2,7 @@ import Link from "next/link";
 import Links from "@/components/Home/Hero/Links";
 import AText from "@/ui/AText";
 import dynamic from "next/dynamic";
+
 const Laptop = dynamic(() => import("@/ui/Laptop"), { ssr: false });
 
 const Hero = () => {
