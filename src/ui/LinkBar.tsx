@@ -50,7 +50,7 @@ const LinkBar: React.FC<Props> = ({
         {variant === 1 && (
           <div
             className={
-              "mt-2 flex items-center gap-8 text-slate-400 transition-all duration-300 hover:cursor-pointer hover:text-black dark:text-neutral-600 dark:hover:text-neutral-200"
+              "mt-2 flex items-center gap-8 text-neutral-600 transition-all duration-300 hover:cursor-pointer hover:text-black dark:text-neutral-600 dark:hover:text-neutral-200"
             }
             onMouseEnter={() => setIsMouseEnter(true)}
             onMouseLeave={() => setIsMouseEnter(false)}
@@ -61,7 +61,7 @@ const LinkBar: React.FC<Props> = ({
         {variant === 2 && (
           <div
             className={
-              "mt-2 flex items-center gap-8 text-slate-400 transition-all duration-300 dark:text-neutral-600"
+              "mt-2 flex items-center gap-8 text-neutral-600 transition-all duration-300 dark:text-neutral-600"
             }
           >
             {children}
