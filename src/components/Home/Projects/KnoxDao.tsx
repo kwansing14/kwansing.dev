@@ -9,7 +9,7 @@ const KnoxDao = () => {
       title={"KnoxDAO"}
       web={knoxweb}
       mobile={knoxmobile}
-      href={"https://www.knoxer.xyz/"}
+      links={[{ name: "Site", href: "https://www.knoxer.xyz/" }]}
     >
       <AText>
         KnoxDAO is a project that aims to create a decentralized, secure, and
