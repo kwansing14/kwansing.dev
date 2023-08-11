@@ -1,5 +1,6 @@
 import Portfolio2022 from "@/components/Home/Projects/Portfolio2022";
 import AlephLabs from "@/components/Home/Projects/AlephLabs";
+import PokemonSleep from "@/components/Home/Projects/PokemonSleep";
 // import KnoxDao from "./KnoxDao";
 
 const GreyBorder = () => {
@@ -12,6 +13,8 @@ const Projects = () => {
       <Portfolio2022 />
       <GreyBorder />
       <AlephLabs />
+      <GreyBorder />
+      <PokemonSleep />
       {/* <GreyBorder /> */}
       {/* <KnoxDao /> */}
       <div className="mt-8 h-1.5 w-full bg-black dark:bg-neutral-200 md:mt-16" />

@@ -61,7 +61,7 @@ const LinkBar: React.FC<Props> = ({
         {variant === 2 && (
           <div
             className={
-              "mt-2 flex items-center gap-8 text-neutral-600 transition-all duration-300 dark:text-neutral-600"
+              "mt-2 flex items-center text-neutral-600 transition-all duration-300 dark:text-neutral-600"
             }
           >
             {children}
