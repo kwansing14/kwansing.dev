@@ -4,13 +4,12 @@ import { useState } from "react";
 import LinkBar from "@/ui/LinkBar";
 import Link from "next/link";
 
-const Links = () => {
-  const [isMouseEnter, setIsMouseEnter] = useState(false);
+interface Props {
+  links: { name: string; href: string }[];
+}
 
-  const links = [
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/kwansing/" },
-    { name: "GitHub", href: "https://github.com/kwansing14" },
-  ];
+const Links: React.FC<Props> = ({ links }) => {
+  const [isMouseEnter, setIsMouseEnter] = useState(false);
   return (
     <LinkBar variant={2} v2State={isMouseEnter}>
       {links.map((link, index) => (

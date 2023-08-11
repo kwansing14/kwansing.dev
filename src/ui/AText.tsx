@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const AText: React.FC<{
-  children: string;
+  children: string | React.ReactElement;
   delay?: number;
   skew?: boolean;
 }> = ({ children, delay = 0, skew }) => {

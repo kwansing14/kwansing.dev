@@ -4,12 +4,13 @@ import alephmobile from "@public/static/alephmobile.png";
 import AText from "@/ui/AText";
 
 const AlephLabs = () => {
+  const links = [{ name: "Site", href: "https://www.aleph-labs.com/" }];
   return (
     <Template
       title={"Aleph Labs Site"}
       web={alephweb}
       mobile={alephmobile}
-      href={"https://www.aleph-labs.com/"}
+      links={links}
     >
       <AText>
         In 2022, I had the opportunity to contribute significantly to the

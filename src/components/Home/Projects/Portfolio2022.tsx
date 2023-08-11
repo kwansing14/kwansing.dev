@@ -9,7 +9,7 @@ const Portfolio2022 = () => {
       title="Portfolio 2022"
       web={alephweb}
       mobile={alephmobile}
-      href="https://kwansing-portfolio.vercel.app/"
+      links={[{ name: "Site", href: "https://kwansing-portfolio.vercel.app/" }]}
     >
       <AText>
         The portfolio project was built in 2022, and showcasing the projects

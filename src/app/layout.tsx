@@ -18,12 +18,12 @@ export default function RootLayout({
   return (
     <ServerThemeProvider attribute="class">
       <html lang="en" suppressHydrationWarning>
-        <Script
+        {/* <Script
           id="passiveEvents"
           type="text/javascript"
           src="https://unpkg.com/default-passive-events"
           async
-        />
+        /> */}
         {/* <Script src="/path/to/highlight.min.js" />
         <Script>hljs.highlightAll();</Script> */}
         {/* favicon */}
