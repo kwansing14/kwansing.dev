@@ -57,6 +57,7 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/favicon/mstile-150x150.png" />
         <meta property="og:description" content="Kwan Sing's Portfolio" />
+        <meta name="google-adsense-account" content="ca-pub-6022766845001236" />
 
         <body>
           <ThemeWrapper>
