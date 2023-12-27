@@ -1,4 +1,4 @@
-<div>
+
   Privacy Policy This Privacy Policy explains how we collect, use, and disclose
   information collected from visitors to our website in connection with the
   AdSense program. By using this website, you agree to the terms of this Privacy
@@ -21,4 +21,3 @@
   updated Privacy Policy on this page. Contact Us If you have any questions or
   suggestions about our Privacy Policy, please contact us at [your contact
   information].
-</div>;
